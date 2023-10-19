@@ -1,6 +1,9 @@
 #/bin/sh
 wl-paste --type text --watch cliphist store &
 wl-paste --type image --watch cliphist store &
+dbus-update-activation-environment --systemd --all &
+systemctl --user import-environment QT_QPA_PLATFORMTHEME &
+nuke.sh &
 hyprpaper & 
 discord-canary &
 variety &
